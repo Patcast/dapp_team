@@ -19,7 +19,7 @@ public class LatencyTest {
     private static final int PORT = 8080;
     private static final String CSV_FILE = "result.csv";
     private static final int[] NO_OF_ROOMS = {1, 2, 4, 8, 16, 32/*, 64, 128, 256, 512*/};   // above 32 crashes
-    private static final int NO_OF_TESTS = 100;
+    private static final int NO_OF_TESTS = 10000;
 
     /**
      * Start the application and call the client functions
