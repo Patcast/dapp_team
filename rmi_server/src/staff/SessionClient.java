@@ -26,7 +26,7 @@ public class SessionClient {
      */
     public static void main(String[] args) {
         try {
-            Registry registry = LocateRegistry.getRegistry(8080);
+            Registry registry = LocateRegistry.getRegistry("yonira.westeurope.cloudapp.azure.com", 8080);
             BookingInterface bookingInterface = (BookingInterface) registry.lookup("Hotel");
 
             logger.log(Level.INFO, "Connected to server, starting client");

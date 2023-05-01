@@ -2,6 +2,7 @@ package hotel;
 
 import staff.SessionClient;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +10,7 @@ import java.util.Locale;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class Room {
+public class Room implements Serializable {
 
 	private static final Logger logger = Logger.getLogger(SessionClient.class.getName());
 

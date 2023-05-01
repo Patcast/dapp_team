@@ -1,0 +1,1 @@
+scp out/artifacts/rmi_server_jar/rmi_server.jar yonira@yonira.westeurope.cloudapp.azure.com:/home/yonira

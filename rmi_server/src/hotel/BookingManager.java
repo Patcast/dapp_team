@@ -8,7 +8,7 @@ import java.util.logging.Logger;
 
 public class BookingManager implements BookingInterface {
 
-	private final Room[] rooms;
+	private Room[] rooms;
 	private static final Logger logger = Logger.getLogger(BookingManager.class.getName());
 	private final Map<Integer, Set<BookingDetail>> bookingSessions;
 	private Integer clients = 0;
@@ -76,6 +76,11 @@ public class BookingManager implements BookingInterface {
 	}
 
 	@Override
+	public List<Room> getRooms() throws RemoteException {
+		return Arrays.stream(rooms).toList();
+	}
+
+	@Override
 	public String printRooms() throws RemoteException {
 		StringBuilder buffer = new StringBuilder();
 
@@ -129,6 +134,17 @@ public class BookingManager implements BookingInterface {
 		currentBookings.clear();
 
 		return true;
+	}
+
+	@Override
+	public void setNumberOfRooms(int noOfRooms) throws RemoteException {
+		rooms = new Room[noOfRooms];
+
+		for (int i = 0; i < noOfRooms; i++) {
+			rooms[i] = new Room(101 + i);
+		}
+
+		System.out.println("Number of rooms " + noOfRooms);
 	}
 
 	public Set<Integer> getAvailableRooms(LocalDate date) {
