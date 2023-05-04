@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ebd3e14-05a6-4f15-bc89-bfcc6df09927" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../rmi_server/Frequency_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../rmi_server/Frequency_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rmi_server/Frequency_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../rmi_server/Frequency_2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rmi_server/Frequency_4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../rmi_server/Frequency_4.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rmi_server/src/test/FrequencyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rmi_server/src/test/FrequencyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rmi_server/src/test/LengthTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rmi_server/src/test/LengthTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rmi_server/src/test/TrafficGen.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rmi_server/src/test/TrafficGen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,51 +46,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/hurricane97/Documents/kul/masters/distributed/dappwork/soap",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "spring.configuration.checksum": "0fc8be0d3c1c5e72058bbab83db1389d",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/hurricane97/Documents/kul/masters/distributed/dappwork/soap&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RdControllerToolWindowsLayoutState" isNewUi="false">
-    <layout>
-      <window_info id="Commit_Guest" />
-      <window_info id="Space Code Reviews" order="0" />
-      <window_info id="Bookmarks" order="1" side_tool="true" />
-      <window_info id="Structure" order="2" side_tool="true" />
-      <window_info id="Pull Requests" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="4" visible="true" weight="0.2502604" />
-      <window_info id="Commit" order="5" />
-      <window_info id="Learn" order="6" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info anchor="bottom" id="Database Changes" order="1" />
-      <window_info anchor="bottom" id="TypeScript" order="2" />
-      <window_info anchor="bottom" id="Profiler" order="3" />
-      <window_info anchor="bottom" id="Build" order="4" weight="0.33028847" />
-      <window_info anchor="bottom" id="Java Enterprise" order="5" show_stripe_button="false" />
-      <window_info anchor="bottom" id="File Transfer" order="6" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.33028847" />
-      <window_info anchor="bottom" id="Problems View" order="8" />
-      <window_info anchor="bottom" id="Spring" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.33028847" />
-      <window_info anchor="bottom" id="Services" order="11" />
-      <window_info anchor="bottom" id="Dependency Checker" order="12" />
-      <window_info active="true" anchor="right" id="Maven" order="0" visible="true" weight="0.19453125" />
-      <window_info anchor="right" id="Endpoints" order="1" />
-      <window_info anchor="right" id="Database" order="2" />
-      <window_info anchor="right" id="Gradle" order="3" />
-      <window_info anchor="right" id="Notifications" order="4" weight="0.25" />
-    </layout>
-  </component>
+}</component>
   <component name="RunManager" selected="Application.SpringSoapApplication">
     <configuration name="SpringSoapApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.springsoap.SpringSoapApplication" />
@@ -122,7 +95,6 @@
       <option name="presentableId" value="Default" />
       <updated>1682242194350</updated>
       <workItem from="1682242195740" duration="12830000" />
-      <workItem from="1682957289612" duration="597000" />
     </task>
     <servers />
   </component>
@@ -139,9 +111,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>

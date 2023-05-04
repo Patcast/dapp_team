@@ -1,9 +1,11 @@
 package test;
 
 import hotel.BookingInterface;
+import hotel.Room;
 
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
+import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -14,6 +16,7 @@ public class TrafficGen extends Thread{
     private static final int PORT = 8080;
 
     private static final AtomicInteger messageSent = new AtomicInteger(0);
+    private static final AtomicInteger sizeOfRoom = new AtomicInteger(0);
 
     public static void main(String[] args) {
         int frequency = Integer.parseInt(args[0]);
@@ -29,7 +32,8 @@ public class TrafficGen extends Thread{
             GeneratorGeneration generation = new GeneratorGeneration(frequency, milliseconds, nanoseconds);
             generation.start();
 
-            System.out.print("Messages sent: " + messageSent.get() + " Time elapsed: " + timeElapsed + "s\r");
+            System.out.print("Messages sent: " + messageSent.get() + " Time elapsed: " + timeElapsed + "s " +
+                    "size of room = " + sizeOfRoom.get() + "\r");
 
             while (targetTime > System.currentTimeMillis()) {}
         }
@@ -47,8 +51,10 @@ public class TrafficGen extends Thread{
             Registry registry = LocateRegistry.getRegistry(SERVER_URL, PORT);
             BookingInterface bookingInterface = (BookingInterface) registry.lookup("Hotel");
 
-            bookingInterface.getRooms();
+            List<Room> rooms = bookingInterface.getRooms();
+
             messageSent.incrementAndGet();
+            sizeOfRoom.set(rooms.size());
         } catch (Exception e) {
             System.out.print("Remote exception thread " + threadNr + "\r");
         }

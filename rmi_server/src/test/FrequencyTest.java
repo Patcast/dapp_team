@@ -1,6 +1,7 @@
 package test;
 
 import hotel.BookingInterface;
+import hotel.Room;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -9,6 +10,7 @@ import java.io.PrintWriter;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -17,7 +19,7 @@ public class FrequencyTest {
     private static final Logger logger = Logger.getLogger(LengthTest.class.getName());
     private static final String SERVER_URL = "yonira.westeurope.cloudapp.azure.com";
     private static final int PORT = 8080;
-    private static final int NO_OF_TESTS = 10000;
+    private static final int NO_OF_TESTS = 1000;
 
     /**
      * Start the application and call the client functions
@@ -77,12 +79,12 @@ public class FrequencyTest {
     private void test(PrintWriter output) throws IOException {
         for (int i = 0; i < NO_OF_TESTS; i++) {
             long start = System.nanoTime();
-            bookingInterface.getRooms();
+            List<Room> rooms = bookingInterface.getRooms();
             long time = (System.nanoTime() - start) / 1000;
 
             output.println(time);
 
-            System.out.print("\rStarting test " + i);
+            System.out.print("\rStarting test " + i + " rooms = " + rooms.size());
         }
         System.out.println();
     }

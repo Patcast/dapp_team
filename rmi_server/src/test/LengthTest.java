@@ -1,6 +1,7 @@
 package test;
 
 import hotel.BookingInterface;
+import hotel.Room;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -9,6 +10,7 @@ import java.io.PrintWriter;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -83,12 +85,12 @@ public class LengthTest {
     private void test(int numberOfRooms, PrintWriter output) throws IOException {
         for (int i = 0; i < NO_OF_TESTS; i++) {
             long start = System.nanoTime();
-            bookingInterface.getRooms();
+            List<Room> rooms = bookingInterface.getRooms();
             long time = (System.nanoTime() - start) / 1000;
 
             output.println(numberOfRooms + "," + time);
 
-            System.out.print("\rStarting test " + i);
+            System.out.print("\rStarting test " + i + " rooms " + rooms.size());
         }
         System.out.println();
     }
