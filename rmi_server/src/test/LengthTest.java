@@ -12,14 +12,14 @@ import java.rmi.registry.Registry;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class LatencyTest {
+public class LengthTest {
 
-    private static final Logger logger = Logger.getLogger(LatencyTest.class.getName());
+    private static final Logger logger = Logger.getLogger(LengthTest.class.getName());
     private static final String SERVER_URL = "yonira.westeurope.cloudapp.azure.com";
     private static final int PORT = 8080;
-    private static final String CSV_FILE = "result.csv";
+    private static final String CSV_FILE = "result_length.csv";
     private static final int[] NO_OF_ROOMS = {1, 2, 4, 8, 16, 32/*, 64, 128, 256, 512*/};   // above 32 crashes
-    private static final int NO_OF_TESTS = 10000;
+    private static final int NO_OF_TESTS = 100;
 
     /**
      * Start the application and call the client functions
@@ -32,7 +32,7 @@ public class LatencyTest {
 
             logger.log(Level.INFO, "Connected to server, starting client");
 
-            LatencyTest client = new LatencyTest(bookingInterface);
+            LengthTest client = new LengthTest(bookingInterface);
             client.run();
         } catch (Exception e)
         {
@@ -44,7 +44,7 @@ public class LatencyTest {
 
     private final BookingInterface bookingInterface;
 
-    public LatencyTest(BookingInterface bookingInterface) {
+    public LengthTest(BookingInterface bookingInterface) {
         this.bookingInterface = bookingInterface;
     }
 
