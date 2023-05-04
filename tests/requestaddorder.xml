@@ -6,7 +6,7 @@
             <gs:name>John Doe</gs:name>
             <gs:address>123 Main St.</gs:address>
             <gs:ordersName>Portobello</gs:ordersName>
-            <gs:amount>2</gs:amount>
+            <gs:amount>1</gs:amount>
         </gs:addOrderRequest>
     </soapenv:Body>
 </soapenv:Envelope>

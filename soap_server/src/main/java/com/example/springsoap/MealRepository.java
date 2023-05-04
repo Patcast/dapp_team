@@ -69,11 +69,14 @@ public class MealRepository {
 
     }
 
-    public ClientOrder registerClientOrders( List<String> orderNames,String clientName, String address){
+    public ClientOrder registerClientOrders( List<String> orderNames,String clientName, String address, int amount){
 
 
         ClientOrder clientOrder = new ClientOrder();
-        orderNames.forEach(n->clientOrder.getMeals().add(findMeal(n)));
+
+        for (int i = 0; i < amount; i++)
+            orderNames.forEach(n->clientOrder.getMeals().add(findMeal(n)));
+
         clientOrder.setName(clientName);
         clientOrder.setAddress(address);
 

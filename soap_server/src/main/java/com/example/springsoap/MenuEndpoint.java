@@ -52,14 +52,11 @@ public class MenuEndpoint {
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "addOrderRequest")
     @ResponsePayload
     public AddOrderResponse addOrder(@RequestPayload AddOrderRequest request) {
-
-        String responseStatus;
-        int amountOfOrders = 0;
         AddOrderResponse response = new AddOrderResponse();
-
-
-        response.setClientOrder(mealRepo.registerClientOrders( request.getOrdersName(),request.getName(),request.getAddress()));
-
+        System.out.println(request.getAmount());
+        response.setClientOrder(
+                mealRepo.registerClientOrders( request.getOrdersName(), request.getName(), request.getAddress(), request.getAmount())
+        );
         return response;
     }
 
